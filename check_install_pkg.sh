@@ -24,7 +24,7 @@ foreach host $hosts {
 		continue
 	}
     set timeout 90
-	spawn ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null root@$host -p 8080
+	spawn ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null root@$host
 	expect {
 	timeout { send_log "$host"; close; continue}
 	"password: "
